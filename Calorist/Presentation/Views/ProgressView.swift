@@ -652,7 +652,7 @@ private struct MeasurementValue: View {
         }
     }
     }
-}
+
 
 struct LoadingView: View {
     @State private var isAnimating = false

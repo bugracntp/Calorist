@@ -4,6 +4,7 @@ struct BodyMetricsView: View {
     let bodyMetrics: BodyMetrics
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var themeManager: ThemeManager
+    @EnvironmentObject private var localizationManager: LocalizationManager
     
     @State private var animateMetrics = false
     @State private var showProgressRings = false
@@ -46,11 +47,11 @@ struct BodyMetricsView: View {
                                     }
                                     
                                     VStack(alignment: .leading, spacing: 4) {
-                                        Text("Vücut Metrikleri")
+                                        Text(localizationManager.localizedString("body_metrics_title"))
                                             .font(.title2)
                                             .fontWeight(.bold)
                                         
-                                        Text("Güncel ölçümleriniz")
+                                        Text(localizationManager.localizedString("body_metrics_subtitle"))
                                             .font(.subheadline)
                                             .foregroundColor(.secondary)
                                     }
@@ -64,7 +65,7 @@ struct BodyMetricsView: View {
                                     GridItem(.flexible())
                                 ], spacing: 16) {
                                     MetricItem(
-                                        title: "İdeal Kilo",
+                                        title: localizationManager.localizedString("ideal_weight"),
                                         value: "\(String(format: "%.1f", bodyMetrics.idealWeight)) kg",
                                         icon: "scalemass.fill",
                                         color: .blue,
@@ -72,7 +73,7 @@ struct BodyMetricsView: View {
                                     )
                                     
                                     MetricItem(
-                                        title: "VKİ",
+                                        title: localizationManager.localizedString("bmi"),
                                         value: "\(String(format: "%.1f", bodyMetrics.bmi))",
                                         icon: "chart.bar.fill",
                                         color: .green,
@@ -80,7 +81,7 @@ struct BodyMetricsView: View {
                                     )
                                     
                                     MetricItem(
-                                        title: "Bel-Kalça Oranı",
+                                        title: localizationManager.localizedString("waist_to_hip_ratio"),
                                         value: String(format: "%.2f", bodyMetrics.waistToHipRatio),
                                         icon: "chart.line.uptrend.xyaxis",
                                         color: .orange,
@@ -88,7 +89,7 @@ struct BodyMetricsView: View {
                                     )
                                     
                                     MetricItem(
-                                        title: "Günlük Kalori",
+                                        title: localizationManager.localizedString("daily_calories"),
                                         value: "\(Int(bodyMetrics.dailyCalorieNeeds)) kcal",
                                         icon: "flame.fill",
                                         color: .purple,
@@ -101,7 +102,7 @@ struct BodyMetricsView: View {
                         // Progress rings section
                         ModernCard {
                             VStack(spacing: 20) {
-                                Text("Vücut Kompozisyonu")
+                                Text(localizationManager.localizedString("body_composition"))
                                     .font(.title2)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -134,7 +135,7 @@ struct BodyMetricsView: View {
                                                     .fontWeight(.bold)
                                                     .foregroundColor(.blue)
                                                 
-                                                Text("VKİ")
+                                                Text(localizationManager.localizedString("bmi"))
                                                     .font(.caption2)
                                                     .foregroundColor(.secondary)
                                             }
@@ -173,7 +174,7 @@ struct BodyMetricsView: View {
                                                     .fontWeight(.bold)
                                                     .foregroundColor(.green)
                                                 
-                                                Text("Yağ")
+                                                Text(localizationManager.localizedString("body_fat"))
                                                     .font(.caption2)
                                                     .foregroundColor(.secondary)
                                             }
@@ -192,14 +193,14 @@ struct BodyMetricsView: View {
                         // Additional measurements
                         ModernCard {
                             VStack(spacing: 20) {
-                                Text("Detaylı Ölçümler")
+                                Text(localizationManager.localizedString("detailed_measurements"))
                                     .font(.title2)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 
                                 VStack(spacing: 16) {
                                     MeasurementRow(
-                                        title: "Kol Çevresi",
+                                            title: localizationManager.localizedString("arm_circumference"),
                                         value: "\(String(format: "%.1f", bodyMetrics.armCircumference)) cm",
                                         icon: "circle.dashed",
                                         color: .orange,
@@ -210,7 +211,7 @@ struct BodyMetricsView: View {
                                         .background(Color.primary.opacity(0.1))
                                     
                                     MeasurementRow(
-                                        title: "Boyun Çevresi",
+                                        title: localizationManager.localizedString("neck_circumference"),
                                         value: "\(String(format: "%.1f", bodyMetrics.armCircumference)) cm",
                                         icon: "circle.dashed",
                                         color: .purple,
@@ -221,7 +222,7 @@ struct BodyMetricsView: View {
                                         .background(Color.primary.opacity(0.1))
                                     
                                     MeasurementRow(
-                                        title: "Bel-Kalça Oranı",
+                                        title: localizationManager.localizedString("waist_to_hip_ratio"),
                                         value: String(format: "%.2f", bodyMetrics.waistToHipRatio),
                                         icon: "chart.bar.fill",
                                         color: .teal,
@@ -235,11 +236,11 @@ struct BodyMetricsView: View {
                     .padding(.vertical, 20)
                 }
             }
-            .navigationTitle("Vücut Metrikleri")
+            .navigationTitle(localizationManager.localizedString("body_metrics_title"))
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Kapat") {
+                    Button(localizationManager.localizedString("close")) {
                         dismiss()
                     }
                 }
@@ -275,21 +276,21 @@ struct BodyMetricsView: View {
     
     private func getBMICategory(_ bmi: Double) -> String {
         switch bmi {
-        case ..<18.5: return "Zayıf"
-        case 18.5..<25: return "Normal"
-        case 25..<30: return "Fazla Kilolu"
-        case 30..<35: return "Obez"
-        default: return "Aşırı Obez"
+        case ..<18.5: return localizationManager.localizedString("underweight")
+        case 18.5..<25: return localizationManager.localizedString("normal")
+        case 25..<30: return localizationManager.localizedString("overweight")
+        case 30..<35: return localizationManager.localizedString("obese")
+        default: return localizationManager.localizedString("extremely_obese")
         }
     }
     
     private func getBodyFatCategory(_ percentage: Double) -> String {
         switch percentage {
-        case ..<10: return "Çok Düşük"
-        case 10..<20: return "Düşük"
-        case 20..<30: return "Normal"
-        case 30..<40: return "Yüksek"
-        default: return "Çok Yüksek"
+        case ..<10: return localizationManager.localizedString("very_low")
+        case 10..<20: return localizationManager.localizedString("low")
+        case 20..<30: return localizationManager.localizedString("normal")
+        case 30..<40: return localizationManager.localizedString("high")
+        default: return localizationManager.localizedString("very_high")
         }
     }
 }

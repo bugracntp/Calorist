@@ -160,6 +160,8 @@
 "changes_saved" = "Changes Saved";
 "activity_updated" = "Activity settings updated successfully";
 "goal_updated" = "Goal updated successfully";
+"current_multiplier" = "Current Multiplier";
+
 
 // MARK: - New Measurement
 "new_measurement" = "New Measurement";
@@ -198,6 +200,7 @@
 "sort_measurements" = "Sort Measurements";
 "export_measurements" = "Export Measurements";
 "import_measurements" = "Import Measurements";
+"summary_title" = "Measurements Summary";
 
 // MARK: - Body Metrics Details
 "body_metrics_title" = "Body Metrics";
@@ -213,6 +216,7 @@
 "body_age" = "Body Age";
 "fitness_score" = "Fitness Score";
 "health_score" = "Health Score";
+"detailed_measurement" = "Detailed Measurements";
 
 // MARK: - Daily Calories Details
 "daily_calories_title" = "Daily Calorie Needs";
@@ -227,7 +231,7 @@
 "bmr_calculation" = "BMR Calculation";
 "activity_multiplier" = "Activity Multiplier";
 "total_daily_energy" = "Total Daily Energy Expenditure";
-
+"daily_calories_unit" = "Calory/Day";
 // MARK: - Progress Tracking
 "progress_tracking" = "Progress Tracking";
 "progress_goals" = "Progress Goals";
@@ -289,5 +293,3 @@
 "app_version" = "App Version";
 "terms_of_service" = "Terms of Service";
 "privacy_policy" = "Privacy Policy";
-
-

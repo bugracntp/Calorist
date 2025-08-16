@@ -6,6 +6,7 @@ struct AddMeasurementView: View {
     let userId: UUID
     
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var localizationManager: LocalizationManager
     @StateObject private var homeViewModel = HomeViewModel()
     
     @State private var height = 170.0
@@ -25,44 +26,44 @@ struct AddMeasurementView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section("Vücut Ölçüleri") {
+                Section(localizationManager.localizedString("body_measurements")) {
                     HStack {
-                        Text("Boy")
+                        Text(localizationManager.localizedString("height"))
                         Spacer()
                         Text("\(String(format: "%.1f", height)) cm")
                     }
                     Slider(value: $height, in: Constants.Health.minHeight...Constants.Health.maxHeight, step: 0.5)
 
                     HStack {
-                        Text("Kilo")
+                        Text(localizationManager.localizedString("weight"))
                         Spacer()
                         Text("\(String(format: "%.1f", weight)) kg")
                     }
                     Slider(value: $weight, in: Constants.Health.minWeight...Constants.Health.maxWeight, step: 0.1)
                     
                     HStack {
-                        Text("Boyun")
+                        Text(localizationManager.localizedString("neck"))
                         Spacer()
                         Text("\(String(format: "%.1f", neck)) cm")
                     }
                     Slider(value: $neck, in: 25...50, step: 0.5)
                     
                     HStack {
-                        Text("Bel")
+                        Text(localizationManager.localizedString("waist"))
                         Spacer()
                         Text("\(String(format: "%.1f", waist)) cm")
                     }
                     Slider(value: $waist, in: 60...150, step: 0.5)
                     
                     HStack {
-                        Text("Kalça")
+                        Text(localizationManager.localizedString("hip"))
                         Spacer()
                         Text("\(String(format: "%.1f", hip)) cm")
                     }
                     Slider(value: $hip, in: 70...150, step: 0.5)
 
                     HStack {
-                        Text("Kol")
+                        Text(localizationManager.localizedString("arm"))
                         Spacer()
                         Text("\(String(format: "%.1f", arm)) cm")
                     }
@@ -70,11 +71,11 @@ struct AddMeasurementView: View {
                 }
                 
                 if isInitialDataLoaded {
-                    Section("Önceki Ölçümden Fark") {
+                    Section(localizationManager.localizedString("previous_measurement_difference")) {
                         let previousMeasurement = getPreviousMeasurement()
                         if let previous = previousMeasurement {
                             HStack {
-                                Text("Kilo Değişimi")
+                                Text(localizationManager.localizedString("weight_change"))
                                 Spacer()
                                 let weightDiff = weight - previous.weight
                                 Text("\(weightDiff >= 0 ? "+" : "")\(String(format: "%.1f", weightDiff)) kg")
@@ -83,7 +84,7 @@ struct AddMeasurementView: View {
                             }
                             
                             HStack {
-                                Text("Bel Değişimi")
+                                Text(localizationManager.localizedString("waist_change"))
                                 Spacer()
                                 let waistDiff = waist - previous.waist
                                 Text("\(waistDiff >= 0 ? "+" : "")\(String(format: "%.1f", waistDiff)) cm")
@@ -94,7 +95,7 @@ struct AddMeasurementView: View {
                     }
                 }
                 
-                Section("Hesaplanan Değerler") {
+                Section(localizationManager.localizedString("calculated_values")) {
                     let measurement = Measurement(
                         userId: userId,
                         height: height,
@@ -109,21 +110,21 @@ struct AddMeasurementView: View {
                         let bodyMetrics = BodyMetrics(measurement: measurement, user: user)
                         
                         HStack {
-                            Text("VKİ")
+                                    Text(localizationManager.localizedString("bmi"))
                             Spacer()
                             Text(String(format: "%.1f", bodyMetrics.bmi))
                                 .fontWeight(.medium)
                         }
                         
                         HStack {
-                            Text("Vücut Yağ Oranı")
+                            Text(localizationManager.localizedString("body_fat"))
                             Spacer()
                             Text(String(format: "%.1f%%", bodyMetrics.bodyFatPercentage))
                                 .fontWeight(.medium)
                         }
                         
                         HStack {
-                            Text("Bel-Kalça Oranı")
+                            Text(localizationManager.localizedString("waist_to_hip_ratio"))
                             Spacer()
                             Text(String(format: "%.2f", bodyMetrics.waistToHipRatio))
                                 .fontWeight(.medium)
@@ -131,17 +132,17 @@ struct AddMeasurementView: View {
                     }
                 }
             }
-            .navigationTitle("Yeni Ölçüm")
+            .navigationTitle(localizationManager.localizedString("new_measurement"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("İptal") {
+                    Button(localizationManager.localizedString("cancel")) {
                         dismiss()
                     }
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Kaydet") {
+                    Button(localizationManager.localizedString("save")) {
                         saveMeasurement()
                     }
                     .disabled(isLoading)
@@ -150,8 +151,8 @@ struct AddMeasurementView: View {
             .task {
                 await loadInitialData()
             }
-            .alert("Hata", isPresented: .constant(errorMessage != nil)) {
-                Button("Tamam") {
+            .alert(localizationManager.localizedString("error"), isPresented: .constant(errorMessage != nil)) {
+                Button(localizationManager.localizedString("ok")) {
                     errorMessage = nil
                 }
             } message: {
@@ -217,7 +218,6 @@ struct AddMeasurementView: View {
         Task {
             do {
                 try await measurementRepository.save(measurement)
-                print("DEBUG: Yeni ölçüm başarıyla kaydedildi")
                 
                 await MainActor.run {
                     isLoading = false
@@ -226,7 +226,7 @@ struct AddMeasurementView: View {
             } catch {
                 await MainActor.run {
                     isLoading = false
-                    errorMessage = "Ölçüm kaydedilirken hata oluştu: \(error.localizedDescription)"
+                    errorMessage = localizationManager.localizedString("measurement_save_error") + ": \(error.localizedDescription)"
                 }
             }
         }

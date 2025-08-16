@@ -21,6 +21,7 @@
 "view_from_measurement" = "Ölçüm ekranından görüntüle";
 "current" = "Mevcut";
 
+
 // MARK: - User Info
 "user_info" = "Kullanıcı Bilgileri";
 "age" = "Yaş";
@@ -160,6 +161,8 @@
 "changes_saved" = "Değişiklikler Kaydedildi";
 "activity_updated" = "Aktivite ayarları başarıyla güncellendi";
 "goal_updated" = "Hedef başarıyla güncellendi";
+"current_multiplier" = "Mevcut Çarpan";
+
 
 // MARK: - New Measurement
 "new_measurement" = "Yeni Ölçüm";
@@ -198,6 +201,7 @@
 "sort_measurements" = "Ölçümleri Sırala";
 "export_measurements" = "Ölçümleri Dışa Aktar";
 "import_measurements" = "Ölçümleri İçe Aktar";
+"summary_title" = "Ölçüm Özetleri";
 
 // MARK: - Body Metrics Details
 "body_metrics_title" = "Vücut Ölçümleri";
@@ -213,6 +217,8 @@
 "body_age" = "Vücut Yaşı";
 "fitness_score" = "Fitness Skoru";
 "health_score" = "Sağlık Skoru";
+"detailed_measurement" = "Ayrıntılı Ölçüm Değerleri";
+
 
 // MARK: - Daily Calories Details
 "daily_calories_title" = "Günlük Kalori İhtiyacı";
@@ -227,7 +233,6 @@
 "bmr_calculation" = "BMR Hesaplama";
 "activity_multiplier" = "Aktivite Çarpanı";
 "total_daily_energy" = "Toplam Günlük Enerji Harcaması";
-
 // MARK: - Progress Tracking
 "progress_tracking" = "İlerleme Takibi";
 "progress_goals" = "İlerleme Hedefleri";
@@ -290,7 +295,3 @@
 "app_version" = "Uygulama Sürümü";
 "terms_of_service" = "Hizmet Şartları";
 "privacy_policy" = "Gizlilik Politikası";
-
-
-
-

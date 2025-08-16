@@ -1,4 +1,6 @@
 import Foundation
+import SwiftUI
+
 
 struct User: Identifiable, Codable {
     var id: UUID
@@ -39,8 +41,8 @@ enum Gender: String, CaseIterable, Codable {
     
     var displayName: String {
         switch self {
-        case .male: return "Erkek"
-        case .female: return "Kadın"
+        case .male: return "male".localized
+        case .female: return "female".localized
         }
     }
 }
@@ -54,11 +56,11 @@ enum ActivityLevel: String, CaseIterable, Codable {
     
     var displayName: String {
         switch self {
-        case .sedentary: return "Hareketsiz"
-        case .lightlyActive: return "Az Hareketli"
-        case .moderatelyActive: return "Orta Hareketli"
-        case .veryActive: return "Çok Hareketli"
-        case .extremelyActive: return "Aşırı Hareketli"
+        case .sedentary: return "sedentary".localized
+        case .lightlyActive: return "lightly_active".localized
+        case .moderatelyActive: return "moderately_active".localized
+        case .veryActive: return "very_active".localized
+        case .extremelyActive: return "extremely_active".localized
         }
     }
     
@@ -80,9 +82,9 @@ enum Goal: String, CaseIterable, Codable {
     
     var displayName: String {
         switch self {
-        case .loseWeight: return "Kilo Ver"
-        case .maintainWeight: return "Kilo Koru"
-        case .gainWeight: return "Kilo Al"
+        case .loseWeight: return "lose_weight".localized
+        case .maintainWeight: return "maintain_weight".localized
+        case .gainWeight: return "gain_weight".localized
         }
     }
 }

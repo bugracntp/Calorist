@@ -6,7 +6,7 @@ struct DailyCaloriesView: View {
     let bodyFatPercentage: Double
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var themeManager: ThemeManager
-    
+    @EnvironmentObject private var localizationManager: LocalizationManager
     @State private var animateValues = false
     @State private var showProgressRing = false
     
@@ -48,11 +48,11 @@ struct DailyCaloriesView: View {
                                     }
                                     
                                     VStack(alignment: .leading, spacing: 4) {
-                                        Text("Günlük Kalori İhtiyacı")
+                                        Text(localizationManager.localizedString("daily_calories_title"))
                                             .font(.title2)
                                             .fontWeight(.bold)
                                         
-                                        Text("BMR + Aktivite Faktörü")
+                                        Text(localizationManager.localizedString("daily_calories_subtitle"))
                                             .font(.subheadline)
                                             .foregroundColor(.secondary)
                                     }
@@ -69,7 +69,7 @@ struct DailyCaloriesView: View {
                                         .offset(y: animateValues ? 0 : 30)
                                         .scaleEffect(animateValues ? 1 : 0.8)
                                     
-                                    Text("kalori/gün")
+                                    Text(localizationManager.localizedString("daily_calories_unit"))
                                         .font(.title3)
                                         .foregroundColor(.secondary)
                                         .opacity(animateValues ? 1 : 0)
@@ -103,7 +103,7 @@ struct DailyCaloriesView: View {
                                             .fontWeight(.bold)
                                             .foregroundColor(.orange)
                                         
-                                        Text("Hedef")
+                                        Text(localizationManager.localizedString("target"))
                                             .font(.caption)
                                             .foregroundColor(.secondary)
                                     }
@@ -133,7 +133,7 @@ struct DailyCaloriesView: View {
                                     }
                                     
                                     VStack(alignment: .leading, spacing: 4) {
-                                        Text("Vücut Kitle İndeksi")
+                                        Text(localizationManager.localizedString("bmi"))
                                             .font(.headline)
                                             .fontWeight(.semibold)
                                         
@@ -178,7 +178,7 @@ struct DailyCaloriesView: View {
                                     }
                                     
                                     VStack(alignment: .leading, spacing: 4) {
-                                        Text("Vücut Yağ Oranı")
+                                        Text(localizationManager.localizedString("body_fat"))
                                             .font(.headline)
                                             .fontWeight(.semibold)
                                         
@@ -208,11 +208,11 @@ struct DailyCaloriesView: View {
                     .padding(.vertical, 20)
                 }
             }
-            .navigationTitle("Günlük Kalori")
+            .navigationTitle(localizationManager.localizedString("daily_calories_title"))
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Kapat") {
+                    Button(localizationManager.localizedString("close")) {
                         dismiss()
                     }
                 }
@@ -242,11 +242,11 @@ struct DailyCaloriesView: View {
     
     private func getBMICategory(bmi: Double) -> String {
         switch bmi {
-        case ..<18.5: return "Zayıf"
-        case 18.5..<25: return "Normal"
-        case 25..<30: return "Fazla Kilolu"
-        case 30..<35: return "Obez"
-        default: return "Aşırı Obez"
+        case ..<18.5: return localizationManager.localizedString("underweight")
+        case 18.5..<25: return localizationManager.localizedString("normal")
+        case 25..<30: return localizationManager.localizedString("overweight")
+        case 30..<35: return localizationManager.localizedString("obese")
+        default: return localizationManager.localizedString("extremely_obese")
         }
     }
     
@@ -262,11 +262,11 @@ struct DailyCaloriesView: View {
     
     private func getBodyFatCategory(_ percentage: Double) -> String {
         switch percentage {
-        case ..<10: return "Çok Düşük"
-        case 10..<20: return "Düşük"
-        case 20..<30: return "Normal"
-        case 30..<40: return "Yüksek"
-        default: return "Çok Yüksek"
+        case ..<10: return localizationManager.localizedString("very_low")
+        case 10..<20: return localizationManager.localizedString("low")
+        case 20..<30: return localizationManager.localizedString("normal")
+        case 30..<40: return localizationManager.localizedString("high")
+        default: return localizationManager.localizedString("very_high")
         }
     }
 }

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ActivitySettingsCard: View {
+    @EnvironmentObject private var localizationManager: LocalizationManager
     let user: User
     let bodyMetrics: BodyMetrics?
     let onSave: (User) -> Void
@@ -39,11 +40,11 @@ struct ActivitySettingsCard: View {
                     }
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Aktivite Ayarları")
+                        Text(localizationManager.localizedString("activity_settings"))
                             .font(.headline)
                             .fontWeight(.semibold)
                         
-                        Text("Günlük kalori hesaplaması için")
+                        Text(localizationManager.localizedString("activity_settings_description"))
                             .font(.caption)
                             .foregroundColor(.secondary)
                     }
@@ -56,7 +57,7 @@ struct ActivitySettingsCard: View {
                 
                 // Activity Level Selection
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Aktivite Seviyesi")
+                    Text(localizationManager.localizedString("activity_level"))
                         .font(.subheadline)
                         .fontWeight(.medium)
                         .foregroundColor(.primary)
@@ -80,7 +81,7 @@ struct ActivitySettingsCard: View {
                 
                 // Goal Selection
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Hedef")
+                    Text(localizationManager.localizedString("goal"))
                         .font(.subheadline)
                         .fontWeight(.medium)
                         .foregroundColor(.primary)
@@ -102,7 +103,7 @@ struct ActivitySettingsCard: View {
                 // Current Settings Info
                 VStack(spacing: 12) {
                     HStack {
-                        Text("Mevcut Çarpan:")
+                        Text(localizationManager.localizedString("current_multiplier"))
                             .font(.caption)
                             .foregroundColor(.secondary)
                         
@@ -115,7 +116,7 @@ struct ActivitySettingsCard: View {
                     }
                     
                     HStack {
-                        Text("Günlük Kalori:")
+                        Text(localizationManager.localizedString("daily_calories"))
                             .font(.caption)
                             .foregroundColor(.secondary)
                         
@@ -134,7 +135,7 @@ struct ActivitySettingsCard: View {
                         Image(systemName: "checkmark.circle.fill")
                             .font(.title3)
                         
-                        Text("Ayarları Kaydet")
+                        Text(localizationManager.localizedString("save"))
                             .font(.headline)
                             .fontWeight(.semibold)
                     }
@@ -155,10 +156,10 @@ struct ActivitySettingsCard: View {
                 .buttonStyle(PlainButtonStyle())
             }
         }
-        .alert("Ayarlar Kaydedildi", isPresented: $showingSaveAlert) {
-            Button("Tamam") { }
+        .alert(localizationManager.localizedString("settings_saved"), isPresented: $showingSaveAlert) {
+            Button(localizationManager.localizedString("ok")) { }
         } message: {
-            Text("Aktivite seviyesi ve hedef başarıyla güncellendi.")
+            Text(localizationManager.localizedString("activity_level_and_goal_updated"))
         }
     }
     

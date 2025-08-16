@@ -11,6 +11,7 @@ struct HomeView: View {
     @State private var showingDailyCalories = false
     @State private var showingBodyMetrics = false
     @State private var showingActivitySettings = false
+
     @State private var animateCards = false
     
     var body: some View {
@@ -44,10 +45,10 @@ struct HomeView: View {
 
                             
                             // Quick actions
-                            QuickActionsView(
-                                onAddMeasurement: { showingAddMeasurement = true },
-                                onActivitySettings: { showingActivitySettings = true }
-                            )
+                                        QuickActionsView(
+                onAddMeasurement: { showingAddMeasurement = true },
+                onActivitySettings: { showingActivitySettings = true }
+            )
                             .opacity(animateCards ? 1 : 0)
                             .offset(y: animateCards ? 0 : 50)
                             
@@ -105,6 +106,7 @@ struct HomeView: View {
                     .environmentObject(themeManager)
                 }
             }
+
             .alert("Hata", isPresented: .constant(viewModel.errorMessage != nil)) {
                 Button("Tamam") {
                     viewModel.errorMessage = nil
@@ -423,6 +425,8 @@ struct QuickActionsView: View {
                 )
             }
             .buttonStyle(PlainButtonStyle())
+            
+
         }
     }
 }

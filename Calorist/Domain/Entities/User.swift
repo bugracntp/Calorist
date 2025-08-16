@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 
-struct User: Identifiable, Codable {
+struct User: Identifiable, Codable, Equatable {
     var id: UUID
     var name: String
     var age: Int

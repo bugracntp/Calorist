@@ -16,6 +16,10 @@
 "quick_actions" = "Hızlı İşlemler";
 "add_measurement" = "Yeni Ölçüm Ekle";
 "activity_settings" = "Aktivite Ayarları";
+"daily_tracking" = "Günlük Takip";
+"track_your_daily_intake" = "Günlük kalori ve su alımınızı takip edin";
+"today_progress" = "Bugünkü İlerleme";
+"ok" = "Tamam";
 "daily_calories" = "Günlük Kalori İhtiyacı";
 "body_metrics" = "Vücut Ölçümleri";
 "view_from_measurement" = "Ölçüm ekranından görüntüle";
@@ -295,3 +299,14 @@
 "app_version" = "Uygulama Sürümü";
 "terms_of_service" = "Hizmet Şartları";
 "privacy_policy" = "Gizlilik Politikası";
+
+// MARK: - Daily Tracking
+"today" = "Bugün";
+"calories" = "Kaloriler";
+"water" = "Su";
+"add_today" = "Bugünün Alımını Ekle";
+"weekly_overview" = "Haftalık Genel Bakış";
+"avg_calories" = "Ort. Kaloriler";
+"avg_water" = "Ort. Su";
+"success" = "Başarılı";
+"tracking_saved" = "Takip verisi başarıyla kaydedildi";

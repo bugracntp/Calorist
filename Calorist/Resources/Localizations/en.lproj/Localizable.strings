@@ -16,6 +16,10 @@
 "quick_actions" = "Quick Actions";
 "add_measurement" = "Add New Measurement";
 "activity_settings" = "Activity Settings";
+"daily_tracking" = "Daily Tracking";
+"track_your_daily_intake" = "Track your daily calorie and water intake";
+"today_progress" = "Today's Progress";
+"ok" = "OK";
 "daily_calories" = "Daily Calorie Needs";
 "body_metrics" = "Body Measurements";
 "view_from_measurement" = "View from measurement screen";
@@ -293,3 +297,14 @@
 "app_version" = "App Version";
 "terms_of_service" = "Terms of Service";
 "privacy_policy" = "Privacy Policy";
+
+// MARK: - Daily Tracking
+"today" = "Today";
+"calories" = "Calories";
+"water" = "Water";
+"add_today" = "Add Today's Intake";
+"weekly_overview" = "Weekly Overview";
+"avg_calories" = "Avg Calories";
+"avg_water" = "Avg Water";
+"success" = "Success";
+"tracking_saved" = "Tracking data saved successfully";

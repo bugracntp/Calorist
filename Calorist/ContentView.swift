@@ -24,6 +24,12 @@ struct ContentView: View {
                     Image(systemName: "chart.line.uptrend.xyaxis")
                     Text(localizationManager.localizedString("progress"))
                 }
+            
+            DailyTrackingTabView()
+                .tabItem {
+                    Image(systemName: "calendar.badge.plus")
+                    Text(localizationManager.localizedString("daily_tracking"))
+                }
         }
         .preferredColorScheme(themeManager.useSystemTheme ? nil : (themeManager.isDarkMode ? .dark : .light))
         .accentColor(themeManager.accentColor)

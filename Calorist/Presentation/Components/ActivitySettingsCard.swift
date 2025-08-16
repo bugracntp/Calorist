@@ -255,24 +255,31 @@ struct GoalButton: View {
     
     var body: some View {
         Button(action: onTap) {
-            HStack {
-                Image(systemName: getIcon(for: goal))
-                    .font(.title3)
+            VStack(spacing: 8) {
+                ZStack {
+                    Circle()
+                        .fill(isSelected ? .white : .black)
+                        .frame(width: 24, height: 24)
+                    
+                    Image(systemName: getIcon(for: goal))
+                        .font(.caption)
+                        .foregroundColor(isSelected ? .black : .white)
+                }
                 
                 Text(goal.displayName)
-                    .font(.subheadline)
+                    .font(.caption)
                     .fontWeight(.medium)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
             }
-            .foregroundColor(isSelected ? .white : .primary)
+            .foregroundColor(isSelected ? .white : .black)
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 12)
+            .padding(.vertical, 16)
+            .padding(.horizontal, 8)
             .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(isSelected ? Color.green : Color.clear)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(isSelected ? Color.green : Color.primary.opacity(0.1), lineWidth: 1)
-                    )
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(isSelected ? Color.green : Color.gray.opacity(0.1))
+                    .shadow(color: isSelected ? .clear : .black.opacity(0.1), radius: 2, x: 0, y: 1)
             )
         }
         .buttonStyle(PlainButtonStyle())
@@ -280,9 +287,9 @@ struct GoalButton: View {
     
     private func getIcon(for goal: Goal) -> String {
         switch goal {
-        case .loseWeight: return "arrow.down.circle.fill"
-        case .maintainWeight: return "equal.circle.fill"
-        case .gainWeight: return "arrow.up.circle.fill"
+        case .loseWeight: return "arrow.down"
+        case .maintainWeight: return "equal"
+        case .gainWeight: return "arrow.up"
         }
     }
 }

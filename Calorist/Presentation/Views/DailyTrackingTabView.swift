@@ -18,14 +18,14 @@ struct DailyTrackingTabView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // Background gradient
+                // Background gradient - matching other views
                 LinearGradient(
                     colors: [
-                        Color(.systemBackground),
-                        Color(.systemGroupedBackground).opacity(0.8)
+                        themeManager.isDarkMode ? Color.black.opacity(0.8) : Color.green.opacity(0.1),
+                        themeManager.isDarkMode ? Color.green.opacity(0.3) : Color.green.opacity(0.05)
                     ],
-                    startPoint: .top,
-                    endPoint: .bottom
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
                 )
                 .ignoresSafeArea()
                 
@@ -128,6 +128,9 @@ struct DailyTrackingTabView: View {
                 // Input Section
                 inputSection
                 
+                // Calorie Comparison Section
+                calorieComparisonSection
+                
                 // Weekly Overview Section
                 weeklyOverviewSection
                 
@@ -183,7 +186,16 @@ struct DailyTrackingTabView: View {
         .padding(.horizontal, 20)
         .background(
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color(.systemBackground))
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            Color(.systemBackground),
+                            Color(.systemGray6).opacity(0.3)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
                 .shadow(color: .black.opacity(0.03), radius: 8, x: 0, y: 3)
         )
     }
@@ -249,7 +261,16 @@ struct DailyTrackingTabView: View {
         .padding(24)
         .background(
             RoundedRectangle(cornerRadius: 24)
-                .fill(Color(.systemBackground))
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            Color(.systemBackground),
+                            Color(.systemGray6).opacity(0.2)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
                 .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 5)
         )
     }
@@ -300,7 +321,16 @@ struct DailyTrackingTabView: View {
         .padding(24)
         .background(
             RoundedRectangle(cornerRadius: 24)
-                .fill(Color(.systemBackground))
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            Color(.systemBackground),
+                            Color(.systemGray6).opacity(0.2)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
                 .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 5)
         )
     }
@@ -352,7 +382,196 @@ struct DailyTrackingTabView: View {
         .padding(24)
         .background(
             RoundedRectangle(cornerRadius: 24)
-                .fill(Color(.systemBackground))
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            Color(.systemBackground),
+                            Color(.systemGray6).opacity(0.2)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
+                .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 5)
+        )
+    }
+    
+    private var calorieComparisonSection: some View {
+        VStack(spacing: 20) {
+            // Section header
+            HStack {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Kalori Karşılaştırması")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(.primary)
+                    
+                    Text("Günlük ihtiyaç vs alınan kaloriler")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                
+                Spacer()
+                
+                Image(systemName: "chart.bar.xaxis")
+                    .font(.title2)
+                    .foregroundColor(.orange)
+            }
+            
+            // Calorie comparison chart
+            VStack(spacing: 16) {
+                // Today's comparison
+                VStack(spacing: 12) {
+                    HStack {
+                        Text("Bugün")
+                            .font(.headline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.primary)
+                        
+                        Spacer()
+                        
+                        Text("\(Int(viewModel.currentTracking?.calorieIntake ?? 0)) / \(Int(viewModel.trackingGoals?.dailyCalorieGoal ?? 2000)) kcal")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    // Progress bar with comparison
+                    VStack(spacing: 8) {
+                        // Goal line
+                        HStack {
+                            Text("Hedef")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            
+                            Spacer()
+                            
+                            Text("\(Int(viewModel.trackingGoals?.dailyCalorieGoal ?? 2000)) kcal")
+                                .font(.caption)
+                                .fontWeight(.medium)
+                                .foregroundColor(.green)
+                        }
+                        
+                        // Main progress bar
+                        GeometryReader { geometry in
+                            ZStack(alignment: .leading) {
+                                // Background
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(Color(.systemGray5))
+                                    .frame(height: 20)
+                                
+                                // Goal indicator line
+                                Rectangle()
+                                    .fill(Color.green)
+                                    .frame(width: 2, height: 20)
+                                    .offset(x: geometry.size.width * 0.8) // Assuming 2000 kcal is 80% of max
+                                
+                                // Consumed calories bar
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(
+                                        LinearGradient(
+                                            colors: [.orange, .red],
+                                            startPoint: .leading,
+                                            endPoint: .trailing
+                                        )
+                                    )
+                                    .frame(
+                                        width: min(
+                                            geometry.size.width * viewModel.getProgressPercentage(for: .calories),
+                                            geometry.size.width
+                                        ),
+                                        height: 20
+                                    )
+                                    .animation(.easeInOut(duration: 1.0), value: viewModel.currentTracking?.calorieIntake ?? 0)
+                            }
+                        }
+                        .frame(height: 20)
+                        
+                        // Consumed calories label
+                        HStack {
+                            Text("Alınan")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            
+                            Spacer()
+                            
+                            Text("\(Int(viewModel.currentTracking?.calorieIntake ?? 0)) kcal")
+                                .font(.caption)
+                                .fontWeight(.medium)
+                                .foregroundColor(.orange)
+                        }
+                    }
+                }
+                
+                Divider()
+                    .background(Color(.systemGray4))
+                
+                // Weekly comparison
+                VStack(spacing: 12) {
+                    HStack {
+                        Text("Bu Hafta")
+                            .font(.headline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.primary)
+                        
+                        Spacer()
+                        
+                        Text("Ortalama: \(Int(viewModel.weeklyAverageCalories)) kcal")
+                            .font(.subheadline)
+                            .fontWeight(.medium)
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    // Weekly mini chart
+                    HStack(spacing: 4) {
+                        ForEach(0..<7) { index in
+                            let dayProgress = getDayProgress(for: index)
+                            
+                            VStack(spacing: 4) {
+                                // Day bar
+                                RoundedRectangle(cornerRadius: 2)
+                                    .fill(
+                                        dayProgress > 0.8 ? Color.red :
+                                        dayProgress > 0.6 ? Color.orange :
+                                        dayProgress > 0.4 ? Color.yellow :
+                                        dayProgress > 0.2 ? Color.blue :
+                                        Color(.systemGray4)
+                                    )
+                                    .frame(
+                                        width: 20,
+                                        height: 40 * dayProgress
+                                    )
+                                    .animation(.easeInOut(duration: 0.5), value: dayProgress)
+                                
+                                // Day label
+                                Text(getDayLabel(for: index))
+                                    .font(.caption2)
+                                    .foregroundColor(
+                                        isCurrentDay(index: index) ? .green : .secondary
+                                    )
+                                    .fontWeight(
+                                        isCurrentDay(index: index) ? .bold : .regular
+                                    )
+                            }
+                        }
+                    }
+                    .frame(height: 60)
+                }
+            }
+        }
+        .padding(24)
+        .background(
+            RoundedRectangle(cornerRadius: 24)
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            Color(.systemBackground),
+                            Color(.systemGray6).opacity(0.2)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
                 .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 5)
         )
     }
@@ -414,6 +633,56 @@ struct DailyTrackingTabView: View {
         Task {
             await viewModel.saveTracking()
         }
+    }
+    
+    // MARK: - Helper Functions
+    
+    private func getDayProgress(for index: Int) -> Double {
+        let calendar = Calendar.current
+        let today = Date()
+        let startOfWeek = calendar.dateInterval(of: .weekOfYear, for: today)?.start ?? today
+        
+        guard let targetDate = calendar.date(byAdding: .day, value: index, to: startOfWeek) else {
+            return 0.0
+        }
+        
+        // Find tracking data for this specific day
+        if let weeklyData = viewModel.weeklyTracking.first(where: { tracking in
+            calendar.isDate(tracking.date, inSameDayAs: targetDate)
+        }) {
+            let goal = viewModel.trackingGoals?.dailyCalorieGoal ?? 2000
+            return min(weeklyData.calorieIntake / goal, 1.0)
+        }
+        
+        return 0.0
+    }
+    
+    private func getDayLabel(for index: Int) -> String {
+        let calendar = Calendar.current
+        let today = Date()
+        let startOfWeek = calendar.dateInterval(of: .weekOfYear, for: today)?.start ?? today
+        
+        guard let targetDate = calendar.date(byAdding: .day, value: index, to: startOfWeek) else {
+            return ""
+        }
+        
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "tr_TR")
+        formatter.dateFormat = "E"
+        
+        return formatter.string(from: targetDate).prefix(1).uppercased()
+    }
+    
+    private func isCurrentDay(index: Int) -> Bool {
+        let calendar = Calendar.current
+        let today = Date()
+        let startOfWeek = calendar.dateInterval(of: .weekOfYear, for: today)?.start ?? today
+        
+        guard let targetDate = calendar.date(byAdding: .day, value: index, to: startOfWeek) else {
+            return false
+        }
+        
+        return calendar.isDate(targetDate, inSameDayAs: today)
     }
 }
 

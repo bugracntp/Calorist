@@ -159,6 +159,7 @@
 // MARK: - Activity Settings
 "activity_settings_title" = "Aktivite Ayarları";
 "activity_settings_subtitle" = "Günlük kalori hesaplaması için";
+"activity_settings_description" = "Günlük kalori hesaplaması için";
 "activity_level_selection" = "Aktivite Seviyesi";
 "goal_selection" = "Hedef";
 "save_changes" = "Değişiklikleri Kaydet";
@@ -237,6 +238,8 @@
 "bmr_calculation" = "BMR Hesaplama";
 "activity_multiplier" = "Aktivite Çarpanı";
 "total_daily_energy" = "Toplam Günlük Enerji Harcaması";
+"daily_calories_unit" = "kcal";
+
 // MARK: - Progress Tracking
 "progress_tracking" = "İlerleme Takibi";
 "progress_goals" = "İlerleme Hedefleri";

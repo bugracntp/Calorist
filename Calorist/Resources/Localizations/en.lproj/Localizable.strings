@@ -21,6 +21,7 @@
 "today_progress" = "Today's Progress";
 "ok" = "OK";
 "daily_calories" = "Daily Calorie Needs";
+"daily_calories_unit" = "kcal";
 "body_metrics" = "Body Measurements";
 "view_from_measurement" = "View from measurement screen";
 "current" = "Current";
@@ -158,6 +159,7 @@
 // MARK: - Activity Settings
 "activity_settings_title" = "Activity Settings";
 "activity_settings_subtitle" = "For daily calorie calculation";
+"activity_settings_description" = "For daily calorie calculation";
 "activity_level_selection" = "Activity Level";
 "goal_selection" = "Goal";
 "save_changes" = "Save Changes";
@@ -235,7 +237,7 @@
 "bmr_calculation" = "BMR Calculation";
 "activity_multiplier" = "Activity Multiplier";
 "total_daily_energy" = "Total Daily Energy Expenditure";
-"daily_calories_unit" = "Calory/Day";
+
 // MARK: - Progress Tracking
 "progress_tracking" = "Progress Tracking";
 "progress_goals" = "Progress Goals";

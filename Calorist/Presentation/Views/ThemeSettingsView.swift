@@ -230,14 +230,14 @@ struct ThemeSettingsView: View {
                                         .foregroundColor(.green)
                                         .font(.title2)
                                     
-                                    Text("Önizleme")
+                                    Text(localizationManager.localizedString("preview"))
                                         .font(.title2)
                                         .fontWeight(.bold)
                                     
                                     Spacer()
                                 }
                                 
-                                Text("Seçtiğiniz tema ayarlarının nasıl görüneceğini önizleyin")
+                                Text(localizationManager.localizedString("preview_description"))
                                     .font(.subheadline)
                                     .foregroundColor(.secondary)
                                 
@@ -254,11 +254,11 @@ struct ThemeSettingsView: View {
                                             )
                                         
                                         VStack(alignment: .leading, spacing: 4) {
-                                            Text("Örnek Kullanıcı")
+                                            Text(localizationManager.localizedString("example_user"))
                                                 .font(.headline)
                                                 .foregroundColor(.primary)
                                             
-                                            Text("Tema önizlemesi")
+                                            Text(localizationManager.localizedString("preview_theme"))
                                                 .font(.caption)
                                                 .foregroundColor(.secondary)
                                         }
@@ -271,12 +271,12 @@ struct ThemeSettingsView: View {
                                     
                                     HStack(spacing: 16) {
                                         VStack(spacing: 4) {
-                                            Text("2,200")
+                                            Text("2200")
                                                 .font(.title2)
                                                 .fontWeight(.bold)
                                                 .foregroundColor(themeManager.accentColor)
                                             
-                                            Text("Kalori")
+                                            Text(localizationManager.localizedString("calories"))
                                                 .font(.caption)
                                                 .foregroundColor(.secondary)
                                         }
@@ -287,7 +287,7 @@ struct ThemeSettingsView: View {
                                                 .fontWeight(.bold)
                                                 .foregroundColor(themeManager.accentColor)
                                             
-                                            Text("VKİ")
+                                            Text(localizationManager.localizedString("bmi"))
                                                 .font(.caption)
                                                 .foregroundColor(.secondary)
                                         }

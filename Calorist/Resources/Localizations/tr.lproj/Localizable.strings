@@ -1,0 +1,296 @@
+// MARK: - General
+"app_name" = "Calorist";
+"close" = "Kapat";
+"save" = "Kaydet";
+"cancel" = "İptal";
+"ok" = "Tamam";
+"error" = "Hata";
+
+// MARK: - Navigation
+"home" = "Ana Sayfa";
+"progress" = "İlerleme";
+"profile" = "Profil";
+
+// MARK: - Home View
+"welcome" = "Hoş Geldiniz";
+"quick_actions" = "Hızlı İşlemler";
+"add_measurement" = "Yeni Ölçüm Ekle";
+"activity_settings" = "Aktivite Ayarları";
+"daily_calories" = "Günlük Kalori İhtiyacı";
+"body_metrics" = "Vücut Ölçümleri";
+"view_from_measurement" = "Ölçüm ekranından görüntüle";
+"current" = "Mevcut";
+
+// MARK: - User Info
+"user_info" = "Kullanıcı Bilgileri";
+"age" = "Yaş";
+"gender" = "Cinsiyet";
+"male" = "Erkek";
+"female" = "Kadın";
+"height" = "Boy";
+"weight" = "Kilo";
+"activity_level" = "Aktivite Seviyesi";
+"goal" = "Hedef";
+
+// MARK: - Activity Levels
+"sedentary" = "Hareketsiz";
+"lightly_active" = "Az Aktif";
+"moderately_active" = "Orta Aktif";
+"very_active" = "Çok Aktif";
+"extremely_active" = "Aşırı Aktif";
+
+// MARK: - Goals
+"lose_weight" = "Kilo Vermek";
+"maintain_weight" = "Kiloyu Korumak";
+"gain_weight" = "Kilo Almak";
+
+// MARK: - Body Metrics
+"bmi" = "VKİ";
+"body_fat" = "Vücut Yağı";
+"ideal_weight" = "İdeal Kilo";
+"waist_to_hip_ratio" = "Bel-Kalça Oranı";
+"arm_circumference" = "Kol Çevresi";
+"neck_circumference" = "Boyun Çevresi";
+
+// MARK: - Progress View
+"progress_title" = "İlerleme";
+"progress_description" = "Vücut ölçümlerinizdeki değişiklikleri görüntüleyin";
+"weight_progress" = "Kilo İlerlemesi";
+"measurements" = "Ölçümler";
+"add_new_measurement" = "Yeni Ölçüm Ekle";
+"time_range" = "Zaman Aralığı";
+"week" = "Hafta";
+"month" = "Ay";
+"three_months" = "3 Ay";
+"year" = "Yıl";
+"loading" = "Yüklüyor...";
+"no_measurements" = "Henüz ölçüm yok";
+"no_measurements_description" = "İlk ölçümünüzü ekleyerek ilerlemenizi takip etmeye başlayın";
+
+// MARK: - Theme Settings
+"theme_settings" = "Tema Ayarları";
+"theme_mode" = "Tema Modu";
+"system_theme" = "Sistem Teması";
+"system_theme_description" = "Sistem ayarlarını otomatik olarak takip eder";
+"manual_theme" = "Manuel Tema";
+"manual_theme_description" = "Kendi tema tercihinizi seçin";
+"light_mode" = "Açık Mod";
+"dark_mode" = "Koyu Mod";
+"accent_color" = "Vurgu Rengi";
+"accent_color_description" = "Uygulama genelinde kullanılan ana rengi seçin";
+"language_settings" = "Dil Ayarları";
+"language_settings_description" = "Uygulama dilini değiştirin";
+"reset_to_defaults" = "Varsayılanlara Sıfırla";
+"done" = "Tamam";
+
+// MARK: - Language Settings
+"language" = "Dil";
+"turkish" = "Türkçe";
+"english" = "English";
+"system_language" = "Sistem Dili";
+"system_language_description" = "Sistem dilini otomatik olarak takip eder";
+
+// MARK: - Add Measurement
+"add_measurement_title" = "Yeni Ölçüm Ekle";
+"measurement_date" = "Ölçüm Tarihi";
+"current_weight" = "Mevcut Kilo";
+"current_height" = "Mevcut Boy";
+"waist" = "Bel";
+"hip" = "Kalça";
+"chest" = "Göğüs";
+"thigh" = "Uyluk";
+"arm" = "Kol";
+"neck" = "Boyun";
+
+// MARK: - User Setup
+"user_setup" = "Kullanıcı Ayarları";
+"enter_your_info" = "Bilgilerinizi girin";
+"name" = "İsim";
+"enter_name" = "İsminizi girin";
+"enter_age" = "Yaşınızı girin";
+"select_gender" = "Cinsiyet seçin";
+"enter_height" = "Boyunuzu girin";
+"enter_weight" = "Kilonuzu girin";
+"select_activity_level" = "Aktivite seviyesini seçin";
+"select_goal" = "Hedef seçin";
+"start_tracking" = "Takip Etmeye Başla";
+
+// MARK: - Units
+"cm" = "cm";
+"kg" = "kg";
+"years" = "yıl";
+
+// MARK: - Categories
+"underweight" = "Zayıf";
+"normal" = "Normal";
+"overweight" = "Kilolu";
+"obese" = "Obez";
+"extremely_obese" = "Aşırı Obez";
+
+"very_low" = "Çok Düşük";
+"low" = "Düşük";
+"normal" = "Normal";
+"high" = "Yüksek";
+"very_high" = "Çok Yüksek";
+
+"low_risk" = "Düşük Risk";
+"medium_risk" = "Orta Risk";
+"high_risk" = "Yüksek Risk";
+
+// MARK: - Preview and Summary Information
+"preview" = "Önizleme";
+"summary" = "Özet";
+"summary_information" = "Özet Bilgi";
+"overview" = "Genel Bakış";
+"quick_overview" = "Hızlı Genel Bakış";
+"daily_summary" = "Günlük Özet";
+"weekly_summary" = "Haftalık Özet";
+"monthly_summary" = "Aylık Özet";
+"progress_summary" = "İlerleme Özeti";
+"measurement_summary" = "Ölçüm Özeti";
+"body_summary" = "Vücut Özeti";
+"health_summary" = "Sağlık Özeti";
+
+// MARK: - Activity Settings
+"activity_settings_title" = "Aktivite Ayarları";
+"activity_settings_subtitle" = "Günlük kalori hesaplaması için";
+"activity_level_selection" = "Aktivite Seviyesi";
+"goal_selection" = "Hedef";
+"save_changes" = "Değişiklikleri Kaydet";
+"changes_saved" = "Değişiklikler Kaydedildi";
+"activity_updated" = "Aktivite ayarları başarıyla güncellendi";
+"goal_updated" = "Hedef başarıyla güncellendi";
+
+// MARK: - New Measurement
+"new_measurement" = "Yeni Ölçüm";
+"body_measurements" = "Vücut Ölçümleri";
+"previous_measurement_difference" = "Önceki Ölçümden Fark";
+"weight_change" = "Kilo Değişimi";
+"waist_change" = "Bel Değişimi";
+"calculated_values" = "Hesaplanan Değerler";
+"measurement_history" = "Ölçüm Geçmişi";
+"add_measurement_success" = "Ölçüm başarıyla eklendi";
+"measurement_date_label" = "Ölçüm Tarihi";
+"current_measurements" = "Mevcut Ölçümler";
+"measurement_units" = "Ölçüm Birimleri";
+"measurement_notes" = "Notlar";
+"save_measurement" = "Ölçümü Kaydet";
+"update_measurement" = "Ölçümü Güncelle";
+"delete_measurement" = "Ölçümü Sil";
+"confirm_delete_measurement" = "Bu ölçümü silmek istediğinizden emin misiniz?";
+
+// MARK: - Measurement History
+"measurement_history_title" = "Ölçüm Geçmişi";
+"measurement_history_subtitle" = "Zaman içinde ilerlemenizi takip edin";
+"all_measurements" = "Tüm Ölçümler";
+"recent_measurements" = "Son Ölçümler";
+"measurement_trends" = "Ölçüm Eğilimleri";
+"measurement_comparison" = "Ölçüm Karşılaştırması";
+"measurement_statistics" = "İstatistikler";
+"average_measurements" = "Ortalama Ölçümler";
+"measurement_chart" = "Ölçüm Grafiği";
+"measurement_graph" = "Ölçüm Grafiği";
+"measurement_timeline" = "Zaman Çizelgesi";
+"measurement_details" = "Ölçüm Detayları";
+"measurement_notes" = "Notlar";
+"measurement_tags" = "Etiketler";
+"filter_measurements" = "Ölçümleri Filtrele";
+"sort_measurements" = "Ölçümleri Sırala";
+"export_measurements" = "Ölçümleri Dışa Aktar";
+"import_measurements" = "Ölçümleri İçe Aktar";
+
+// MARK: - Body Metrics Details
+"body_metrics_title" = "Vücut Ölçümleri";
+"body_metrics_subtitle" = "Mevcut ölçümleriniz";
+"body_composition" = "Vücut Kompozisyonu";
+"body_fat_percentage" = "Vücut Yağ Yüzdesi";
+"muscle_mass" = "Kas Kütlesi";
+"bone_mass" = "Kemik Kütlesi";
+"water_percentage" = "Su Yüzdesi";
+"visceral_fat" = "Visseral Yağ";
+"subcutaneous_fat" = "Subkutan Yağ";
+"metabolic_age" = "Metabolik Yaş";
+"body_age" = "Vücut Yaşı";
+"fitness_score" = "Fitness Skoru";
+"health_score" = "Sağlık Skoru";
+
+// MARK: - Daily Calories Details
+"daily_calories_title" = "Günlük Kalori İhtiyacı";
+"daily_calories_subtitle" = "BMR + Aktivite Faktörü";
+"calories_per_day" = "kalori/gün";
+"target_calories" = "Hedef Kaloriler";
+"calorie_deficit" = "Kalori Açığı";
+"calorie_surplus" = "Kalori Fazlası";
+"maintenance_calories" = "Koruma Kalorileri";
+"weight_loss_calories" = "Kilo Kaybı Kalorileri";
+"weight_gain_calories" = "Kilo Alma Kalorileri";
+"bmr_calculation" = "BMR Hesaplama";
+"activity_multiplier" = "Aktivite Çarpanı";
+"total_daily_energy" = "Toplam Günlük Enerji Harcaması";
+
+// MARK: - Progress Tracking
+"progress_tracking" = "İlerleme Takibi";
+"progress_goals" = "İlerleme Hedefleri";
+"goal_progress" = "Hedef İlerlemesi";
+"target_weight" = "Hedef Kilo";
+"current_progress" = "Mevcut İlerleme";
+"remaining_goal" = "Kalan Hedef";
+"goal_completion" = "Hedef Tamamlanması";
+"milestone_reached" = "Kilometre Taşı Ulaşıldı";
+"achievement_unlocked" = "Başarı Kilidi Açıldı";
+"streak_count" = "Seri Sayısı";
+"consistency_score" = "Tutarlılık Skoru";
+"date" = "Tarih";
+
+// MARK: - Health Indicators
+"health_indicators" = "Sağlık Göstergeleri";
+"health_status" = "Sağlık Durumu";
+"risk_factors" = "Risk Faktörleri";
+"health_recommendations" = "Sağlık Tavsiyeleri";
+"health_tips" = "Sağlık İpuçları";
+"nutrition_advice" = "Beslenme Tavsiyeleri";
+"exercise_recommendations" = "Egzersiz Tavsiyeleri";
+"lifestyle_suggestions" = "Yaşam Tarzı Önerileri";
+
+// MARK: - Data Management
+"data_management" = "Veri Yönetimi";
+"backup_data" = "Veriyi Yedekle";
+"restore_data" = "Veriyi Geri Yükle";
+"sync_data" = "Veriyi Senkronize Et";
+"export_data" = "Veriyi Dışa Aktar";
+"import_data" = "Veriyi İçe Aktar";
+"clear_data" = "Veriyi Temizle";
+"reset_data" = "Veriyi Sıfırla";
+"data_privacy" = "Veri Gizliliği";
+"data_security" = "Veri Güvenliği";
+
+// MARK: - Notifications and Reminders
+"notifications" = "Bildirimler";
+"reminders" = "Hatırlatıcılar";
+"measurement_reminder" = "Ölçüm Hatırlatıcısı";
+"goal_reminder" = "Hedef Hatırlatıcısı";
+"progress_reminder" = "İlerleme Hatırlatıcısı";
+"notification_settings" = "Bildirim Ayarları";
+"reminder_frequency" = "Hatırlatıcı Sıklığı";
+"daily_reminder" = "Günlük Hatırlatıcı";
+"weekly_reminder" = "Haftalık Hatırlatıcı";
+"monthly_reminder" = "Aylık Hatırlatıcı";
+
+// MARK: - Help and Support
+"help" = "Yardım";
+"support" = "Destek";
+"tutorial" = "Eğitim";
+"user_guide" = "Kullanıcı Kılavuzu";
+"faq" = "SSS";
+"contact_support" = "Destekle İletişime Geç";
+"feedback" = "Geri Bildirim";
+"rate_app" = "Uygulamayı Değerlendir";
+"share_app" = "Uygulamayı Paylaş";
+"about_app" = "Uygulama Hakkında";
+"app_version" = "Uygulama Sürümü";
+"terms_of_service" = "Hizmet Şartları";
+"privacy_policy" = "Gizlilik Politikası";
+
+
+
+

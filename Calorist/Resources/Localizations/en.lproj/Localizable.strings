@@ -1,0 +1,293 @@
+// MARK: - General
+"app_name" = "Calorist";
+"close" = "Close";
+"save" = "Save";
+"cancel" = "Cancel";
+"ok" = "OK";
+"error" = "Error";
+
+// MARK: - Navigation
+"home" = "Home";
+"progress" = "Progress";
+"profile" = "Profile";
+
+// MARK: - Home View
+"welcome" = "Welcome";
+"quick_actions" = "Quick Actions";
+"add_measurement" = "Add New Measurement";
+"activity_settings" = "Activity Settings";
+"daily_calories" = "Daily Calorie Needs";
+"body_metrics" = "Body Measurements";
+"view_from_measurement" = "View from measurement screen";
+"current" = "Current";
+
+// MARK: - User Info
+"user_info" = "User Information";
+"age" = "Age";
+"gender" = "Gender";
+"male" = "Male";
+"female" = "Female";
+"height" = "Height";
+"weight" = "Weight";
+"activity_level" = "Activity Level";
+"goal" = "Goal";
+
+// MARK: - Activity Levels
+"sedentary" = "Sedentary";
+"lightly_active" = "Lightly Active";
+"moderately_active" = "Moderately Active";
+"very_active" = "Very Active";
+"extremely_active" = "Extremely Active";
+
+// MARK: - Goals
+"lose_weight" = "Lose Weight";
+"maintain_weight" = "Maintain Weight";
+"gain_weight" = "Gain Weight";
+
+// MARK: - Body Metrics
+"bmi" = "BMI";
+"body_fat" = "Body Fat";
+"ideal_weight" = "Ideal Weight";
+"waist_to_hip_ratio" = "Waist-to-Hip Ratio";
+"arm_circumference" = "Arm Circumference";
+"neck_circumference" = "Neck Circumference";
+
+// MARK: - Progress View
+"progress_title" = "Progress";
+"progress_description" = "View changes in your body measurements";
+"weight_progress" = "Weight Progress";
+"measurements" = "Measurements";
+"add_new_measurement" = "Add New Measurement";
+"time_range" = "Time Range";
+"week" = "Week";
+"month" = "Month";
+"three_months" = "3 Months";
+"year" = "Year";
+"loading" = "Loading...";
+"no_measurements" = "No measurements yet";
+"no_measurements_description" = "Start tracking your progress by adding your first measurement";
+
+// MARK: - Theme Settings
+"theme_settings" = "Theme Settings";
+"theme_mode" = "Theme Mode";
+"system_theme" = "System Theme";
+"system_theme_description" = "Automatically follows system settings";
+"manual_theme" = "Manual Theme";
+"manual_theme_description" = "Choose your own theme preference";
+"light_mode" = "Light Mode";
+"dark_mode" = "Dark Mode";
+"accent_color" = "Accent Color";
+"accent_color_description" = "Choose the main color used throughout the app";
+"language_settings" = "Language Settings";
+"language_settings_description" = "Change the app language";
+"reset_to_defaults" = "Reset to Defaults";
+"done" = "Done";
+
+// MARK: - Language Settings
+"language" = "Language";
+"turkish" = "Türkçe";
+"english" = "English";
+"system_language" = "System Language";
+"system_language_description" = "Automatically follows system language";
+
+// MARK: - Add Measurement
+"add_measurement_title" = "Add New Measurement";
+"measurement_date" = "Measurement Date";
+"current_weight" = "Current Weight";
+"current_height" = "Current Height";
+"waist" = "Waist";
+"hip" = "Hip";
+"chest" = "Chest";
+"thigh" = "Thigh";
+"arm" = "Arm";
+"neck" = "Neck";
+
+// MARK: - User Setup
+"user_setup" = "User Setup";
+"enter_your_info" = "Enter your information";
+"name" = "Name";
+"enter_name" = "Enter your name";
+"enter_age" = "Enter your age";
+"select_gender" = "Select gender";
+"enter_height" = "Enter your height";
+"enter_weight" = "Enter your weight";
+"select_activity_level" = "Select activity level";
+"select_goal" = "Select goal";
+"start_tracking" = "Start Tracking";
+
+// MARK: - Units
+"cm" = "cm";
+"kg" = "kg";
+"years" = "years";
+
+// MARK: - Categories
+"underweight" = "Underweight";
+"normal" = "Normal";
+"overweight" = "Overweight";
+"obese" = "Obese";
+"extremely_obese" = "Extremely Obese";
+
+"very_low" = "Very Low";
+"low" = "Low";
+"normal" = "Normal";
+"high" = "High";
+"very_high" = "Very High";
+
+"low_risk" = "Low Risk";
+"medium_risk" = "Medium Risk";
+"high_risk" = "High Risk";
+
+// MARK: - Preview and Summary Information
+"preview" = "Preview";
+"summary" = "Summary";
+"summary_information" = "Summary Information";
+"overview" = "Overview";
+"quick_overview" = "Quick Overview";
+"daily_summary" = "Daily Summary";
+"weekly_summary" = "Weekly Summary";
+"monthly_summary" = "Monthly Summary";
+"progress_summary" = "Progress Summary";
+"measurement_summary" = "Measurement Summary";
+"body_summary" = "Body Summary";
+"health_summary" = "Health Summary";
+
+// MARK: - Activity Settings
+"activity_settings_title" = "Activity Settings";
+"activity_settings_subtitle" = "For daily calorie calculation";
+"activity_level_selection" = "Activity Level";
+"goal_selection" = "Goal";
+"save_changes" = "Save Changes";
+"changes_saved" = "Changes Saved";
+"activity_updated" = "Activity settings updated successfully";
+"goal_updated" = "Goal updated successfully";
+
+// MARK: - New Measurement
+"new_measurement" = "New Measurement";
+"body_measurements" = "Body Measurements";
+"previous_measurement_difference" = "Difference from Previous Measurement";
+"weight_change" = "Weight Change";
+"waist_change" = "Waist Change";
+"calculated_values" = "Calculated Values";
+"measurement_history" = "Measurement History";
+"add_measurement_success" = "Measurement added successfully";
+"measurement_date_label" = "Measurement Date";
+"current_measurements" = "Current Measurements";
+"measurement_units" = "Measurement Units";
+"measurement_notes" = "Notes";
+"save_measurement" = "Save Measurement";
+"update_measurement" = "Update Measurement";
+"delete_measurement" = "Delete Measurement";
+"confirm_delete_measurement" = "Are you sure you want to delete this measurement?";
+
+// MARK: - Measurement History
+"measurement_history_title" = "Measurement History";
+"measurement_history_subtitle" = "Track your progress over time";
+"all_measurements" = "All Measurements";
+"recent_measurements" = "Recent Measurements";
+"measurement_trends" = "Measurement Trends";
+"measurement_comparison" = "Measurement Comparison";
+"measurement_statistics" = "Statistics";
+"average_measurements" = "Average Measurements";
+"measurement_chart" = "Measurement Chart";
+"measurement_graph" = "Measurement Graph";
+"measurement_timeline" = "Timeline";
+"measurement_details" = "Measurement Details";
+"measurement_notes" = "Notes";
+"measurement_tags" = "Tags";
+"filter_measurements" = "Filter Measurements";
+"sort_measurements" = "Sort Measurements";
+"export_measurements" = "Export Measurements";
+"import_measurements" = "Import Measurements";
+
+// MARK: - Body Metrics Details
+"body_metrics_title" = "Body Metrics";
+"body_metrics_subtitle" = "Your current measurements";
+"body_composition" = "Body Composition";
+"body_fat_percentage" = "Body Fat Percentage";
+"muscle_mass" = "Muscle Mass";
+"bone_mass" = "Bone Mass";
+"water_percentage" = "Water Percentage";
+"visceral_fat" = "Visceral Fat";
+"subcutaneous_fat" = "Subcutaneous Fat";
+"metabolic_age" = "Metabolic Age";
+"body_age" = "Body Age";
+"fitness_score" = "Fitness Score";
+"health_score" = "Health Score";
+
+// MARK: - Daily Calories Details
+"daily_calories_title" = "Daily Calorie Needs";
+"daily_calories_subtitle" = "BMR + Activity Factor";
+"calories_per_day" = "calories/day";
+"target_calories" = "Target Calories";
+"calorie_deficit" = "Calorie Deficit";
+"calorie_surplus" = "Calorie Surplus";
+"maintenance_calories" = "Maintenance Calories";
+"weight_loss_calories" = "Weight Loss Calories";
+"weight_gain_calories" = "Weight Gain Calories";
+"bmr_calculation" = "BMR Calculation";
+"activity_multiplier" = "Activity Multiplier";
+"total_daily_energy" = "Total Daily Energy Expenditure";
+
+// MARK: - Progress Tracking
+"progress_tracking" = "Progress Tracking";
+"progress_goals" = "Progress Goals";
+"goal_progress" = "Goal Progress";
+"target_weight" = "Target Weight";
+"current_progress" = "Current Progress";
+"remaining_goal" = "Remaining Goal";
+"goal_completion" = "Goal Completion";
+"milestone_reached" = "Milestone Reached";
+"achievement_unlocked" = "Achievement Unlocked";
+"streak_count" = "Streak Count";
+"consistency_score" = "Consistency Score";
+
+// MARK: - Health Indicators
+"health_indicators" = "Health Indicators";
+"health_status" = "Health Status";
+"risk_factors" = "Risk Factors";
+"health_recommendations" = "Health Recommendations";
+"health_tips" = "Health Tips";
+"nutrition_advice" = "Nutrition Advice";
+"exercise_recommendations" = "Exercise Recommendations";
+"lifestyle_suggestions" = "Lifestyle Suggestions";
+
+// MARK: - Data Management
+"data_management" = "Data Management";
+"backup_data" = "Backup Data";
+"restore_data" = "Restore Data";
+"sync_data" = "Sync Data";
+"export_data" = "Export Data";
+"import_data" = "Import Data";
+"clear_data" = "Clear Data";
+"reset_data" = "Reset Data";
+"data_privacy" = "Data Privacy";
+"data_security" = "Data Security";
+
+// MARK: - Notifications and Reminders
+"notifications" = "Notifications";
+"reminders" = "Reminders";
+"measurement_reminder" = "Measurement Reminder";
+"goal_reminder" = "Goal Reminder";
+"progress_reminder" = "Progress Reminder";
+"notification_settings" = "Notification Settings";
+"reminder_frequency" = "Reminder Frequency";
+"daily_reminder" = "Daily Reminder";
+"weekly_reminder" = "Weekly Reminder";
+"monthly_reminder" = "Monthly Reminder";
+
+// MARK: - Help and Support
+"help" = "Help";
+"support" = "Support";
+"tutorial" = "Tutorial";
+"user_guide" = "User Guide";
+"faq" = "FAQ";
+"contact_support" = "Contact Support";
+"feedback" = "Feedback";
+"rate_app" = "Rate App";
+"share_app" = "Share App";
+"about_app" = "About App";
+"app_version" = "App Version";
+"terms_of_service" = "Terms of Service";
+"privacy_policy" = "Privacy Policy";
+
+

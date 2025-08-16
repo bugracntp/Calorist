@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-    </entity>
+               <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+               <attribute name="activityLevel" optional="YES" attributeType="String"/>
+               <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+               <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+               <attribute name="gender" optional="YES" attributeType="String"/>
+               <attribute name="goal" optional="YES" attributeType="String"/>
+               <attribute name="id" optional="YES" attributeType="String"/>
+               <attribute name="name" optional="YES" attributeType="String"/>
+               <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+           </entity>
+               <entity name="MeasurementEntity" representedClassName="MeasurementEntity" syncable="YES" codeGenerationType="class">
+               <attribute name="arm" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+               <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+               <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+               <attribute name="hip" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+               <attribute name="id" optional="YES" attributeType="String"/>
+               <attribute name="neck" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+               <attribute name="userId" optional="YES" attributeType="String"/>
+               <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+               <attribute name="waist" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+           </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="UserEntity" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="MeasurementEntity" positionX="-63" positionY="18" width="128" height="44"/>
     </elements>
 </model>

@@ -105,12 +105,22 @@ Repository implementations convert between domain entities and Core Data models 
 
 ### Screens
 - **Home**: Unified user info, quick actions, entry points to features.
+  <img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/45716070-fec1-4cc3-85c0-1b83d4617b86" />
 - **Progress**: Charts, progress summaries, and historical data.
+  <img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/c92c5110-bcf6-4b77-af3c-ba0be75f7d1a" />
 - **Daily Tracking (Tab)**: Add/view calorie and water intake, goals, and a weekly mini-chart with current-day highlighting.
+  <img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/1e65092f-9e42-4858-a7d9-a2653081c58c" />
 - **Daily Calories**: Shows calculated daily calories based on profile and activity.
+  <img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/cb9cdd7a-78d5-4e0c-9fe8-2309f0cd6be8" />
 - **Body Metrics**: Key metrics and latest measurements.
+  <img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/6cfa41fb-b67b-4b1d-bb2d-9171cbc7b5c8" />
 - **Theme Settings**: Toggle theme preferences.
-- **User Setup**: Guided onboarding for profile creation.
+  <img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/03ec3d51-60c5-4b48-8be0-9dc46be6bf39" />
+- **User profile**: Screens for user informatins and measurements.
+  <img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/02d58b19-f2f6-447d-a2cc-b7dc67ee2d92" />
+  <img width="1206" height="2622" alt="image" src="https://github.com/user-attachments/assets/c01786ad-8b7e-45e4-a8bb-98b42ab75bbf" />
+
+
 
 ### Requirements
 - Xcode 16 or later

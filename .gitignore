@@ -1,0 +1,68 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Xcode
+**/DerivedData/
+**/build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+**/xcuserdata/
+*.xcuserstate
+*.moved-aside
+*.xccoverage
+*.xcscmblueprint
+*.xcworkspace/xcuserdata/
+*.xcresult
+*.xcarchive
+
+# Swift Package Manager
+.build/
+.swiftpm/
+# Package.resolved is usually committed for reproducible builds
+# Package.resolved
+
+# CocoaPods (if used)
+Pods/
+# Podfile.lock is usually committed; comment out to ignore if desired
+# Podfile.lock
+
+# Carthage (if used)
+Carthage/Build/
+
+# Fastlane (if used)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Editors/IDEs
+.idea/
+.vscode/
+
+# Logs & temp
+*.log
+*.swp
+*.swo
+*~
+
+# Env/config (uncomment if you keep secrets locally)
+# .env
+# .env.*
+
+
